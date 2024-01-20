@@ -4,12 +4,13 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    scroll-behavior: smooth;
   }
 
   body {
     background-image: url("./assets/page1/background.svg");
     background-size: cover;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
   }
 }
