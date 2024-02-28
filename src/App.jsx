@@ -14,6 +14,7 @@ import page4 from './assets/page4.svg'
 import page5 from './assets/page5.svg'
 import page6 from './assets/page6.svg'
 import logo from './assets/logo.svg'
+import Text from './component/Text'
 
 
 const Loading = () => {
@@ -25,6 +26,15 @@ const Loading = () => {
 }
 
 const App = () => {
+  const invited = [
+    { "name": "Abrahan B. Mandereza", "occupation": "FOUNDER / PRESIDENT" },
+    { "name": "Marlou B. Narag", "occupation": "NATIONAL PRESIDENT" },
+    { "name": "Arnold Z. Ello", "occupation": "PROVINCE DIRECTOR" },
+    { "name": "Renato Norberte", "occupation": "NATIONAL TREASURER" },
+    { "name": "Catalino S. Miguel", "occupation": "HEAD MARSHALL" },
+    { "name": "McDonald Garcia", "occupation": "ENGINEER" },
+    { "name": "Stephen Songlo", "occupation": "ENGINEER" },
+  ]
   return (
     <>
       <header className='snap-y snap-mandatory w-screen h-screen overflow-scroll '>
@@ -110,10 +120,18 @@ const App = () => {
               viewport={{ once: false }}
               transition={{ delay: .7 }}
               className='mx-auto max-sm:landscape:w-[20vw]  pt-56 lg:pt-40 sm:w-[60%] md:h-screen flex flex-col lg:w-[30%] '>
-              <img className='w-[80%] mx-auto min-w-32' src={logo} alt="" />
+              <div className='w-[80%] mx-auto min-w-32 justify-center flex flex-col gap-4'>
+                <h1 className='text-center text-xl font-extrabold text-gray-600 text-s'>YOU ARE INVITED</h1>
+                {invited.map((invite, index) => (<Text key={index} name={invite.name} occupation={invite.occupation} />))}
+
+              </div>
+
+
 
             </m.div>
           </section >
+
+
 
         </Suspense>
 
