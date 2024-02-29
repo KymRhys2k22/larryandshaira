@@ -113,23 +113,7 @@ const App = () => {
 
             </m.div>
           </section >
-          <section className='snap-start w-screen h-screen '>
-            <m.div
-              initial={{ opacity: 0, y: 1 }}
-              whileInView={{ opacity: 1, y: -100 }}
-              viewport={{ once: false }}
-              transition={{ delay: .7 }}
-              className='mx-auto max-sm:landscape:w-[20vw]  pt-56 lg:pt-40 sm:w-[60%] md:h-screen flex flex-col lg:w-[30%] '>
-              <div className='w-[80%] mx-auto min-w-32 justify-center flex flex-col gap-4'>
-                <h1 className='text-center text-xl font-extrabold text-gray-600 text-s'>YOU ARE INVITED</h1>
-                {invited.map((invite, index) => (<Text key={index} name={invite.name} occupation={invite.occupation} />))}
-
-              </div>
-
-
-
-            </m.div>
-          </section >
+          
 
 
 
